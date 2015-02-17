@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.relational.RelationalDesign>
+   <object objectType="Table" objectID="474620FC-F437-C27A-AA7B-6316BB1B3015" name="DEPT" seqName="seg_0"/>
+   <object objectType="Table" objectID="252066B0-FF3D-867C-315F-7E2E85CFDD59" name="EMP" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="06893523-8E56-79F4-1000-12CDA4DD66E7" name="EMP_DEPT_FK" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="FE8D6AD8-9273-B506-CEF9-D038B95F6C71" name="EMP_MGR_FK" seqName="seg_0"/>
+</oracle.dbtools.crest.model.design.relational.RelationalDesign>

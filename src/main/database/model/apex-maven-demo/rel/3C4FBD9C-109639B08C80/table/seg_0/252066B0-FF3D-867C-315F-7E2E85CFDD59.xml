@@ -1,0 +1,192 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="252066B0-FF3D-867C-315F-7E2E85CFDD59" name="EMP">
+<createdBy>Nick</createdBy>
+<createdTime>2014-07-06 17:11:09 UTC</createdTime>
+<ownerDesignName>apex-maven-demo</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="AB70C708-7B82-EB53-DBBD-1BA988967FCE">
+<createdBy>Nick</createdBy>
+<createdTime>2014-07-06 17:12:17 UTC</createdTime>
+<ownerDesignName>apex-maven-demo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="EMPNO" id="2FB5E66F-61CA-E36D-1797-37ADD73C0BE1">
+<createdBy>Nick</createdBy>
+<createdTime>2014-07-06 17:12:31 UTC</createdTime>
+<ownerDesignName>apex-maven-demo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ENAME" id="B2C76D88-4458-8346-2DA7-A62C4BD41023">
+<createdBy>Nick</createdBy>
+<createdTime>2014-07-06 17:12:31 UTC</createdTime>
+<ownerDesignName>apex-maven-demo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="JOB" id="F0CEA904-D8E8-BCE4-A356-137BB72F9962">
+<createdBy>Nick</createdBy>
+<createdTime>2014-07-06 17:12:47 UTC</createdTime>
+<ownerDesignName>apex-maven-demo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>9</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="HIREDATE" id="48660D88-0BF8-D657-F91A-4F64B36D7FB4">
+<createdBy>Nick</createdBy>
+<createdTime>2014-07-06 17:12:47 UTC</createdTime>
+<ownerDesignName>apex-maven-demo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SAL" id="4CA5C3D6-E2F2-0D6D-00C1-C8EA47272691">
+<createdBy>Nick</createdBy>
+<createdTime>2014-07-06 17:12:47 UTC</createdTime>
+<ownerDesignName>apex-maven-demo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="COMM" id="3AB0A8EF-8A8F-C0B9-FB75-B47E6599798E">
+<createdBy>Nick</createdBy>
+<createdTime>2014-07-06 17:12:47 UTC</createdTime>
+<ownerDesignName>apex-maven-demo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FK_MGR_ID" id="828A7348-32E9-4143-3D4D-B9BCEBCA3A9B">
+<createdBy>Nick</createdBy>
+<createdTime>2014-07-13 19:36:53 UTC</createdTime>
+<ownerDesignName>apex-maven-demo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<delegate>AB70C708-7B82-EB53-DBBD-1BA988967FCE</delegate>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="FE8D6AD8-9273-B506-CEF9-D038B95F6C71" referredColumn="AB70C708-7B82-EB53-DBBD-1BA988967FCE"/>
+</associations>
+</Column>
+<Column name="FK_DEPT_ID" id="E4C3A639-5711-D10A-B8DA-D770D6311F05">
+<createdBy>Nick</createdBy>
+<createdTime>2014-07-06 17:23:27 UTC</createdTime>
+<ownerDesignName>apex-maven-demo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<delegate>1D0B3B7D-53CD-7361-C873-26B89B50E9F3</delegate>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="06893523-8E56-79F4-1000-12CDA4DD66E7" referredColumn="1D0B3B7D-53CD-7361-C873-26B89B50E9F3"/>
+</associations>
+</Column>
+<Column name="CREATED_BY" id="84775C41-E338-1C62-CE2F-861571829420">
+<createdBy>Nick</createdBy>
+<createdTime>2014-07-06 17:12:47 UTC</createdTime>
+<ownerDesignName>apex-maven-demo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CREATED_ON" id="A91EB923-AE0C-67F2-83C3-731F8ACBE027">
+<createdBy>Nick</createdBy>
+<createdTime>2014-07-06 17:13:28 UTC</createdTime>
+<ownerDesignName>apex-maven-demo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LAST_MODIFIED_BY" id="947967D2-B8FD-1F12-ED16-C3AD7249C2A6">
+<createdBy>Nick</createdBy>
+<createdTime>2014-07-06 17:13:45 UTC</createdTime>
+<ownerDesignName>apex-maven-demo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LAST_MODIFIED_ON" id="DB4852E7-EA12-4F51-A702-BC4A29070BCD">
+<createdBy>Nick</createdBy>
+<createdTime>2014-07-06 17:13:55 UTC</createdTime>
+<ownerDesignName>apex-maven-demo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="6DDBE3F8-F672-9343-26BE-D98CBF021E74" name="EMP_PK">
+<createdBy>Nick</createdBy>
+<createdTime>2014-07-06 17:12:17 UTC</createdTime>
+<ownerDesignName>apex-maven-demo</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AB70C708-7B82-EB53-DBBD-1BA988967FCE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6073B335-2592-D286-6F87-681D880770EA" name="EMP_DEPT_FK">
+<createdBy>Nick</createdBy>
+<createdTime>2014-07-06 17:23:27 UTC</createdTime>
+<ownerDesignName>apex-maven-demo</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E4C3A639-5711-D10A-B8DA-D770D6311F05"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="65CCFAA6-F44A-87DB-611F-74A813F6E1C5" name="EMP_MGR_FK">
+<createdBy>Nick</createdBy>
+<createdTime>2014-07-13 19:36:53 UTC</createdTime>
+<ownerDesignName>apex-maven-demo</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="828A7348-32E9-4143-3D4D-B9BCEBCA3A9B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

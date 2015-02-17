@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                                       http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.0.xsd">
+
+  <!-- packages -->
+
+  <changeSet id="packages" author="nick.buytaert" runAlways="true" runOnChange="true">
+    <sqlFile splitStatements="false" path="src/main/database/latest/package/dao_dept.pks.sql" />
+    <sqlFile splitStatements="false" path="src/main/database/latest/package/dao_dept.pkb.sql" />
+    <sqlFile splitStatements="false" path="src/main/database/latest/package/dao_emp.pks.sql" />
+    <sqlFile splitStatements="false" path="src/main/database/latest/package/dao_emp.pkb.sql" />
+
+    <sqlFile splitStatements="false" path="src/main/database/latest/package/bl_dept.pks.sql" />
+    <sqlFile splitStatements="false" path="src/main/database/latest/package/bl_dept.pkb.sql" />
+    <sqlFile splitStatements="false" path="src/main/database/latest/package/bl_emp.pks.sql" />
+    <sqlFile splitStatements="false" path="src/main/database/latest/package/bl_emp.pkb.sql" />
+
+    <sqlFile splitStatements="false" path="src/main/database/latest/package/bl_user_registration.pks.sql" />
+    <sqlFile splitStatements="false" path="src/main/database/latest/package/bl_user_registration.pkb.sql" />
+  </changeSet>
+
+
+  <!-- triggers -->
+
+  <changeSet id="br_iu_dept" author="nick.buytaert" runAlways="true" runOnChange="true">
+    <sqlFile splitStatements="false" path="src/main/database/latest/trigger/br_iu_dept.sql" />
+  </changeSet>
+
+  <changeSet id="br_iu_emp" author="nick.buytaert" runAlways="true" runOnChange="true">
+    <sqlFile splitStatements="false" path="src/main/database/latest/trigger/br_iu_emp.sql" />
+  </changeSet>
+
+</databaseChangeLog>

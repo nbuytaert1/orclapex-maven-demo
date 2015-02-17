@@ -1,0 +1,13 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="FE8D6AD8-9273-B506-CEF9-D038B95F6C71" name="EMP_MGR_FK">
+<createdBy>Nick</createdBy>
+<createdTime>2014-07-13 19:36:53 UTC</createdTime>
+<ownerDesignName>apex-maven-demo</ownerDesignName>
+<containerWithKeyObject>252066B0-FF3D-867C-315F-7E2E85CFDD59</containerWithKeyObject>
+<deleteRule>NO ACTION</deleteRule>
+<localFKIndex>65CCFAA6-F44A-87DB-611F-74A813F6E1C5</localFKIndex>
+<keyObject>6DDBE3F8-F672-9343-26BE-D98CBF021E74</keyObject>
+<mandatory>false</mandatory>
+<transferable>true</transferable>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

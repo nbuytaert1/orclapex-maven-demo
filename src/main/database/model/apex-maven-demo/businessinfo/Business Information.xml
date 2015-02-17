@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<BusinessInfoDesign class="oracle.dbtools.crest.model.businessinfo.BusinessInfoDesign" name="Business Information" id="215DB82B-9798-1790-09CE-0FB55AB3D563">
+<createdBy>Nick</createdBy>
+<createdTime>2014-07-06 16:32:46 UTC</createdTime>
+<ownerDesignName>apex-maven-demo</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</BusinessInfoDesign>

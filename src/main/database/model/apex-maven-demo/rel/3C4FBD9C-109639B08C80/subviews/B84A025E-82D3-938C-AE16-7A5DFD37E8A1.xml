@@ -1,0 +1,45 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Diagram class="oracle.dbtools.crest.swingui.relational.DPVRelational" name="apex-maven-demo" id="B84A025E-82D3-938C-AE16-7A5DFD37E8A1">
+<createdBy>Nick</createdBy>
+<createdTime>2014-07-06 16:33:25 UTC</createdTime>
+<autoRoute>false</autoRoute>
+<boxInbox>true</boxInbox>
+<showLegend>false</showLegend>
+<showLabels>false</showLabels>
+<showRelAttributes>false</showRelAttributes>
+<showGrid>false</showGrid>
+<diagramColor>-1</diagramColor>
+<display>false</display>
+<notation>1</notation>
+<objectViews>
+<OView class="oracle.dbtools.crest.swingui.relational.TVTable" oid="252066B0-FF3D-867C-315F-7E2E85CFDD59" otype="Table" vid="2C250063-A55A-840C-3CA7-6817A312E1D8">
+<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
+<bounds x="323" y="13" width="233" height="218"/>
+</OView>
+<OView class="oracle.dbtools.crest.swingui.relational.TVTable" oid="474620FC-F437-C27A-AA7B-6316BB1B3015" otype="Table" vid="4185C75D-6F2B-DDB3-6329-A690105A0437">
+<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
+<bounds x="15" y="45" width="235" height="148"/>
+</OView>
+</objectViews>
+<connectors>
+<Connector class="oracle.dbtools.crest.swingui.relational.TVFKRelation" oid="06893523-8E56-79F4-1000-12CDA4DD66E7" otype="FKIndexAssociation" vid_source="4185C75D-6F2B-DDB3-6329-A690105A0437" vid_target="2C250063-A55A-840C-3CA7-6817A312E1D8">
+<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
+<lineWidth>1</lineWidth>
+<points>
+<point x="250" y="119"/>
+<point x="323" y="119"/>
+</points>
+</Connector>
+<Connector class="oracle.dbtools.crest.swingui.relational.TVFKRelation" oid="FE8D6AD8-9273-B506-CEF9-D038B95F6C71" otype="FKIndexAssociation" vid_source="2C250063-A55A-840C-3CA7-6817A312E1D8" vid_target="2C250063-A55A-840C-3CA7-6817A312E1D8">
+<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
+<lineWidth>1</lineWidth>
+<points>
+<point x="556" y="122"/>
+<point x="577" y="122"/>
+<point x="577" y="256"/>
+<point x="437" y="256"/>
+<point x="437" y="231"/>
+</points>
+</Connector>
+</connectors>
+</Diagram>

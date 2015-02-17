@@ -1,0 +1,108 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="474620FC-F437-C27A-AA7B-6316BB1B3015" name="DEPT">
+<createdBy>Nick</createdBy>
+<createdTime>2014-07-06 17:18:12 UTC</createdTime>
+<ownerDesignName>apex-maven-demo</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="1D0B3B7D-53CD-7361-C873-26B89B50E9F3">
+<createdBy>Nick</createdBy>
+<createdTime>2014-07-06 17:18:27 UTC</createdTime>
+<ownerDesignName>apex-maven-demo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DEPTNO" id="B6486521-79AA-0323-F94B-3F22B27B4ECC">
+<createdBy>Nick</createdBy>
+<createdTime>2014-07-06 17:18:38 UTC</createdTime>
+<ownerDesignName>apex-maven-demo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DNAME" id="52217CB5-DA99-F7EC-B2AE-2110C3CFD5E6">
+<createdBy>Nick</createdBy>
+<createdTime>2014-07-06 17:18:38 UTC</createdTime>
+<ownerDesignName>apex-maven-demo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>14</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LOC" id="BFDC18D0-1AEF-FB62-D202-C79CBA5B7167">
+<createdBy>Nick</createdBy>
+<createdTime>2014-07-06 17:18:38 UTC</createdTime>
+<ownerDesignName>apex-maven-demo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>13</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CREATED_BY" id="3E36A6CC-1C00-4363-1C63-A12CB454F968">
+<createdBy>Nick</createdBy>
+<createdTime>2014-07-06 17:19:15 UTC</createdTime>
+<ownerDesignName>apex-maven-demo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CREATED_ON" id="093D3DD5-B26D-67AD-CAD2-5787E9E1BAA8">
+<createdBy>Nick</createdBy>
+<createdTime>2014-07-06 17:19:59 UTC</createdTime>
+<ownerDesignName>apex-maven-demo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LAST_MODIFIED_BY" id="5CCBA9A8-1451-995B-BA1D-68AC12CA7400">
+<createdBy>Nick</createdBy>
+<createdTime>2014-07-06 17:20:09 UTC</createdTime>
+<ownerDesignName>apex-maven-demo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LAST_MODIFIED_ON" id="70BE6311-6302-6A45-9019-C42CC76A725C">
+<createdBy>Nick</createdBy>
+<createdTime>2014-07-06 17:20:16 UTC</createdTime>
+<ownerDesignName>apex-maven-demo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="2E1E422B-886E-F739-FEFF-979F99639978" name="DEPT_PK">
+<createdBy>Nick</createdBy>
+<createdTime>2014-07-06 17:18:27 UTC</createdTime>
+<ownerDesignName>apex-maven-demo</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1D0B3B7D-53CD-7361-C873-26B89B50E9F3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

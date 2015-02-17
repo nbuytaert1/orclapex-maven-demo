@@ -1,0 +1,4 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.relational.RelationalDesign>
+   <object objectType="main_view" objectID="B84A025E-82D3-938C-AE16-7A5DFD37E8A1" name="apex-maven-demo" visible="true"/>
+</oracle.dbtools.crest.model.design.relational.RelationalDesign>

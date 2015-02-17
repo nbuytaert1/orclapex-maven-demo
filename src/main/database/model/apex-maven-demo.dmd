@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="apex-maven-demo" id="7A4B1B5B-3641-928F-96A2-31579B7396BD" version="3.5">
+<createdBy>Nick</createdBy>
+<createdTime>2014-07-06 16:32:46 UTC</createdTime>
+<ownerDesignName>apex-maven-demo</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>7A4B1B5B-3641-928F-96A2-31579B7396BD</designId>
+</OSDM_Design>

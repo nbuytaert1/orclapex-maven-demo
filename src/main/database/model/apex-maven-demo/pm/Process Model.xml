@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<ProcessModel class="oracle.dbtools.crest.model.design.process.ProcessModel" name="Process Model" id="2EF23406-3670-8575-4539-99543F2F3D1C">
+<createdBy>Nick</createdBy>
+<createdTime>2014-07-06 16:32:46 UTC</createdTime>
+<ownerDesignName>apex-maven-demo</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</ProcessModel>

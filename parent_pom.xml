@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                             http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.contribute.apex</groupId>
+  <artifactId>orclapex-maven-demo-parent</artifactId>
+  <version>1.0</version>
+  <packaging>pom</packaging>
+
+  <build>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.liquibase</groupId>
+          <artifactId>liquibase-maven-plugin</artifactId>
+          <version>3.2.0</version>
+
+          <dependencies>
+            <dependency>
+              <groupId>com.oracle</groupId>
+              <artifactId>ojdbc7</artifactId>
+              <version>12.1.0.2.0</version>
+            </dependency>
+          </dependencies>
+
+          <executions>
+            <execution>
+              <id>liquibase-update</id>
+              <phase>compile</phase>
+              <goals>
+                <goal>update</goal>
+              </goals>
+
+              <configuration>
+                <driver>oracle.jdbc.driver.OracleDriver</driver>
+                <url>${database.url}</url>
+                <username>${database.username}</username>
+                <password>${database.password}</password>
+                <changeLogFile>src/main/database/changelog/master.xml</changeLogFile>
+                <promptOnNonLocalDatabase>false</promptOnNonLocalDatabase>
+                <verbose>false</verbose>
+              </configuration>
+            </execution>
+          </executions>
+        </plugin>
+
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-antrun-plugin</artifactId>
+          <version>1.7</version>
+
+          <dependencies>
+            <dependency>
+              <groupId>org.apache.ant</groupId>
+              <artifactId>ant-jsch</artifactId>
+              <version>1.9.4</version>
+            </dependency>
+          </dependencies>
+
+          <executions>
+            <execution>
+              <id>file-copy</id>
+              <phase>compile</phase>
+              <goals>
+                <goal>run</goal>
+              </goals>
+
+              <configuration>
+                <target>
+                  <sshexec host="${webserver.host}"
+                           username="${webserver.username}"
+                           password="${webserver.password}"
+                           trust="true"
+                           verbose="false"
+                           command="rm -rf ${webserver.directory} &amp;&amp;
+                                    mkdir -p ${webserver.directory}" />
+
+                  <scp todir="${webserver.username}:${webserver.password}@${webserver.host}:${webserver.directory}"
+                       trust="true"
+                       verbose="false">
+                    <fileset dir="src/main/web-files" />
+                  </scp>
+                </target>
+              </configuration>
+            </execution>
+          </executions>
+        </plugin>
+
+        <plugin>
+          <groupId>com.contribute</groupId>
+          <artifactId>orclapex-maven-plugin</artifactId>
+          <version>1.0</version>
+
+          <executions>
+            <execution>
+              <id>app-import</id>
+              <phase>none</phase>
+              <goals>
+                <goal>import</goal>
+              </goals>
+
+              <configuration>
+                <connectionString>${database.sqlplusUrl}</connectionString>
+                <username>${database.username}</username>
+                <password>${database.password}</password>
+                <appExportLocation>src/main/apex</appExportLocation>
+                <workspaceName>${apex.workspace}</workspaceName>
+                <appId>${apex.appid}</appId>
+              </configuration>
+            </execution>
+
+            <execution>
+              <id>generate-natural-docs</id>
+              <phase>none</phase>
+              <goals>
+                <goal>run-natural-docs</goal>
+              </goals>
+
+              <configuration>
+                <naturalDocsHome>util/naturaldocs</naturalDocsHome>
+                <inputSourceDirectories>
+                  <inputSourceDirectory>src/main/database</inputSourceDirectory>
+                </inputSourceDirectories>
+                <outputFormat>FramedHTML</outputFormat>
+                <outputDirectory>target/technical-docs</outputDirectory>
+                <projectDirectory>target/technical-docs/settings</projectDirectory> <!-- dir must exist before generating natural docs -->
+                <rebuild>true</rebuild>
+              </configuration>
+            </execution>
+          </executions>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
+</project>

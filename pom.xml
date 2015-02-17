@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                             http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.contribute.apex</groupId>
+  <artifactId>orclapex-maven-demo</artifactId>
+  <version>1.0</version>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.liquibase</groupId>
+        <artifactId>liquibase-maven-plugin</artifactId>
+        <version>3.2.0</version>
+
+        <dependencies>
+          <dependency>
+            <groupId>com.oracle</groupId>
+            <artifactId>ojdbc7</artifactId>
+            <version>12.1.0.2.0</version>
+          </dependency>
+        </dependencies>
+
+        <executions>
+          <execution>
+            <id>liquibase-update</id>
+            <phase>compile</phase>
+            <goals>
+              <goal>update</goal>
+            </goals>
+
+            <configuration>
+              <driver>oracle.jdbc.driver.OracleDriver</driver>
+              <url>jdbc:oracle:thin:@localhost:8202/pdbdb01</url>
+              <username>tst_apex_maven_demo</username>
+              <password>secret</password>
+              <changeLogFile>src/main/database/changelog/master.xml</changeLogFile>
+              <promptOnNonLocalDatabase>false</promptOnNonLocalDatabase>
+              <verbose>false</verbose>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-antrun-plugin</artifactId>
+        <version>1.7</version>
+
+        <dependencies>
+          <dependency>
+            <groupId>org.apache.ant</groupId>
+            <artifactId>ant-jsch</artifactId>
+            <version>1.9.4</version>
+          </dependency>
+        </dependencies>
+
+        <executions>
+          <execution>
+            <id>file-copy</id>
+            <phase>compile</phase>
+            <goals>
+              <goal>run</goal>
+            </goals>
+
+            <configuration>
+              <target>
+                <sshexec host="apex.contribute.be"
+                         username="i"
+                         password="secret"
+                         trust="true"
+                         verbose="false"
+                         command="rm -rf /opt/apex/images/apex_custom/tst_apex_maven_demo &amp;&amp;
+                                  mkdir -p /opt/apex/images/apex_custom/tst_apex_maven_demo" />
+
+                <scp todir="i:secret@apex.contribute.be:/opt/apex/images/apex_custom/tst_apex_maven_demo"
+                     trust="true"
+                     verbose="false">
+                  <fileset dir="src/main/web-files" />
+                </scp>
+              </target>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+
+      <plugin>
+        <groupId>com.contribute</groupId>
+        <artifactId>orclapex-maven-plugin</artifactId>
+        <version>1.0</version>
+
+        <executions>
+          <execution>
+            <id>app-import</id>
+            <phase>compile</phase>
+            <goals>
+              <goal>import</goal>
+            </goals>
+
+            <configuration>
+              <connectionString>localhost:8202/pdbdb01</connectionString>
+              <username>tst_apex_maven_demo</username>
+              <password>secret</password>
+              <appExportLocation>src/main/apex</appExportLocation>
+              <workspaceName>tst_apex_maven_demo</workspaceName>
+              <appId>1010</appId>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+</project>

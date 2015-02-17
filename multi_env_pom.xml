@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                             http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.contribute.apex</groupId>
+  <artifactId>orclapex-maven-demo-multi-env</artifactId>
+  <version>1.0</version>
+
+  <parent>
+    <groupId>com.contribute.apex</groupId>
+    <artifactId>orclapex-maven-demo-parent</artifactId>
+    <version>1.0</version>
+    <relativePath>parent_pom.xml</relativePath>
+  </parent>
+
+  <profiles>
+    <profile>
+      <id>dev</id>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
+
+      <properties>
+        <database.url>jdbc:oracle:thin:@localhost:8202/pdbdb01</database.url>
+        <database.username>dev_apex_maven_demo</database.username>
+        <database.password>secret</database.password>
+        <webserver.host>apex.contribute.be</webserver.host>
+        <webserver.username>i</webserver.username>
+        <webserver.password>secret</webserver.password>
+        <webserver.directory>/opt/apex/images/apex_custom/dev_apex_maven_demo</webserver.directory>
+      </properties>
+
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>com.contribute</groupId>
+            <artifactId>orclapex-maven-plugin</artifactId>
+
+            <executions>
+              <execution>
+                <id>generate-natural-docs</id>
+                <phase>compile</phase>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+
+    <profile>
+      <id>tst</id>
+      <properties>
+        <database.url>jdbc:oracle:thin:@localhost:8202/pdbdb01</database.url>
+        <database.sqlplusUrl>localhost:8202/pdbdb01</database.sqlplusUrl>
+        <database.username>tst_apex_maven_demo</database.username>
+        <database.password>secret</database.password>
+        <webserver.host>apex.contribute.be</webserver.host>
+        <webserver.username>i</webserver.username>
+        <webserver.password>secret</webserver.password>
+        <webserver.directory>/opt/apex/images/apex_custom/tst_apex_maven_demo</webserver.directory>
+        <apex.workspace>tst_apex_maven_demo</apex.workspace>
+        <apex.appid>1010</apex.appid>
+      </properties>
+
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>com.contribute</groupId>
+            <artifactId>orclapex-maven-plugin</artifactId>
+
+            <executions>
+              <execution>
+                <id>app-import</id>
+                <phase>compile</phase>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+
+    <profile>
+      <id>prd</id>
+      <properties>
+        <database.url>jdbc:oracle:thin:@localhost:8202/pdbdb01</database.url>
+        <database.sqlplusUrl>localhost:8202/pdbdb01</database.sqlplusUrl>
+        <database.username>prd_apex_maven_demo</database.username>
+        <database.password>secret</database.password>
+        <webserver.host>apex.contribute.be</webserver.host>
+        <webserver.username>i</webserver.username>
+        <webserver.password>secret</webserver.password>
+        <webserver.directory>/opt/apex/images/apex_custom/prd_apex_maven_demo</webserver.directory>
+        <apex.workspace>prd_apex_maven_demo</apex.workspace>
+        <apex.appid>1020</apex.appid>
+      </properties>
+
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>com.contribute</groupId>
+            <artifactId>orclapex-maven-plugin</artifactId>
+
+            <executions>
+              <execution>
+                <id>app-import</id>
+                <phase>compile</phase>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+  </profiles>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.liquibase</groupId>
+        <artifactId>liquibase-maven-plugin</artifactId>
+      </plugin>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-antrun-plugin</artifactId>
+      </plugin>
+    </plugins>
+  </build>
+</project>

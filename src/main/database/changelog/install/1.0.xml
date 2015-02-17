@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                                       http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.0.xsd">
+
+  <!-- tables -->
+
+  <changeSet id="create_dept" author="nick.buytaert">
+    <sqlFile path="src/main/database/install/table/create_dept.sql" />
+  </changeSet>
+
+  <changeSet id="create_emp" author="nick.buytaert">
+    <sqlFile path="src/main/database/install/table/create_emp.sql" />
+  </changeSet>
+
+
+  <!-- sequences -->
+
+  <changeSet id="create_seq_dept" author="nick.buytaert">
+    <sqlFile path="src/main/database/install/sequence/create_seq_dept.sql" />
+  </changeSet>
+
+  <changeSet id="create_seq_emp" author="nick.buytaert">
+    <sqlFile path="src/main/database/install/sequence/create_seq_emp.sql" />
+  </changeSet>
+
+</databaseChangeLog>

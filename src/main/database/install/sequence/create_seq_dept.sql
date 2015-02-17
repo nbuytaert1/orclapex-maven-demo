@@ -1,0 +1,1 @@
+create sequence seq_dept start with 5;

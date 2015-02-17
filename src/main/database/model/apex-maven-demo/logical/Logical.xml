@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<LogicalDesign class="oracle.dbtools.crest.model.design.logical.LogicalDesign" name="Logical" id="C5E38A54-936F-ACF9-6A99-60E58920DAAE" mainViewID="9EE7F9C5-6044-C821-5FF4-4D407F92EBDD">
+<createdBy>Nick</createdBy>
+<createdTime>2014-07-06 16:32:46 UTC</createdTime>
+<ownerDesignName>apex-maven-demo</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</LogicalDesign>
