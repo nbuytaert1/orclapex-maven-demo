@@ -125,8 +125,8 @@
                   <inputSourceDirectory>src/main/database</inputSourceDirectory>
                 </inputSourceDirectories>
                 <outputFormat>FramedHTML</outputFormat>
-                <outputDirectory>target/technical-docs</outputDirectory>
-                <projectDirectory>target/technical-docs/settings</projectDirectory> <!-- dir must exist before generating natural docs -->
+                <outputDirectory>src/main/database/technical-docs</outputDirectory>
+                <projectDirectory>src/main/database/technical-docs/settings</projectDirectory> <!-- dir must exist before generating natural docs -->
                 <rebuild>true</rebuild>
               </configuration>
             </execution>

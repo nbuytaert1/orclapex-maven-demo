@@ -29,6 +29,7 @@ mvn install:install-file -Dfile=orclapex-maven-plugin-1.0.jar -DpomFile=orclapex
 
 * [SQL*Plus](http://www.oracle.com/technetwork/database/features/instant-client/index-097480.html)
 * [Perl](http://www.activestate.com/activeperl) - version 5.8 or higher - Mac and Linux users have Perl installed by default
+* [Jenkins](http://jenkins-ci.org/) - *optionally*
 
 ### 3. Build instructions
 

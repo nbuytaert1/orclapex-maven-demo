@@ -6,17 +6,27 @@
 
   <!-- packages -->
 
-  <changeSet id="packages" author="nick.buytaert" runAlways="true" runOnChange="true">
+  <changeSet id="dao_dept" author="nick.buytaert" runAlways="true" runOnChange="true">
     <sqlFile splitStatements="false" path="src/main/database/latest/package/dao_dept.pks.sql" />
     <sqlFile splitStatements="false" path="src/main/database/latest/package/dao_dept.pkb.sql" />
+  </changeSet>
+
+  <changeSet id="dao_emp" author="nick.buytaert" runAlways="true" runOnChange="true">
     <sqlFile splitStatements="false" path="src/main/database/latest/package/dao_emp.pks.sql" />
     <sqlFile splitStatements="false" path="src/main/database/latest/package/dao_emp.pkb.sql" />
+  </changeSet>
 
+  <changeSet id="bl_dept" author="nick.buytaert" runAlways="true" runOnChange="true">
     <sqlFile splitStatements="false" path="src/main/database/latest/package/bl_dept.pks.sql" />
     <sqlFile splitStatements="false" path="src/main/database/latest/package/bl_dept.pkb.sql" />
+  </changeSet>
+
+  <changeSet id="bl_emp" author="nick.buytaert" runAlways="true" runOnChange="true">
     <sqlFile splitStatements="false" path="src/main/database/latest/package/bl_emp.pks.sql" />
     <sqlFile splitStatements="false" path="src/main/database/latest/package/bl_emp.pkb.sql" />
+  </changeSet>
 
+  <changeSet id="bl_user_registration" author="nick.buytaert" runAlways="true" runOnChange="true">
     <sqlFile splitStatements="false" path="src/main/database/latest/package/bl_user_registration.pks.sql" />
     <sqlFile splitStatements="false" path="src/main/database/latest/package/bl_user_registration.pkb.sql" />
   </changeSet>
@@ -30,6 +40,17 @@
 
   <changeSet id="br_iu_emp" author="nick.buytaert" runAlways="true" runOnChange="true">
     <sqlFile splitStatements="false" path="src/main/database/latest/trigger/br_iu_emp.sql" />
+  </changeSet>
+
+
+  <!-- views -->
+
+  <changeSet id="vw_dept_report" author="nick.buytaert" runAlways="true" runOnChange="true">
+    <sqlFile path="src/main/database/latest/view/vw_dept_report.sql" />
+  </changeSet>
+
+  <changeSet id="vw_emp_report" author="nick.buytaert" runAlways="true" runOnChange="true">
+    <sqlFile path="src/main/database/latest/view/vw_emp_report.sql" />
   </changeSet>
 
 </databaseChangeLog>
