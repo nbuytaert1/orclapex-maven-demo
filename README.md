@@ -1,12 +1,12 @@
 Oracle APEX Maven Demo
 ======================
 
-Sample project that demonstrates how [Apache Maven](http://maven.apache.org/) can facilitate the Oracle APEX development and deployment process.
+Sample project that demonstrates how [Apache Maven](http://maven.apache.org/) can facilitate Oracle APEX development and deployment.
 The following plugins are part of the Maven build:
 
 * [Liquibase Maven plugin](http://www.liquibase.org/): manage database changes (DDL and DML scripts)
-* [AntRun Maven plugin](http://maven.apache.org/plugins/maven-antrun-plugin/): copy web files to the application server
-* [Oracle APEX Maven plugin](https://github.com/nbuytaert1/orclapex-maven-plugin): import the APEX application and generate technical documentation
+* [AntRun Maven plugin](http://maven.apache.org/plugins/maven-antrun-plugin/): copy static files to the server's file system
+* [Oracle APEX Maven plugin](https://github.com/nbuytaert1/orclapex-maven-plugin): import the APEX application(s) and generate technical documentation
 
 ### 1. Environment
 
@@ -35,10 +35,11 @@ mvn install:install-file -Dfile=orclapex-maven-plugin-1.0.jar -DpomFile=orclapex
 
 * Open a command-line shell and change directory to the project's root directory
 * The -f option lets you specify an alternate POM file
-* The profile option (-P) allows you to build to a specific environment (dev, tst or prd)
+* The profile option (-P) allows you to activate a specific build profile (dev, ci, tst or prd)
 
 ```
 mvn -f multi_env_pom.xml -P dev compile
+mvn -f multi_env_pom.xml -P ci compile
 mvn -f multi_env_pom.xml -P tst compile
 mvn -f multi_env_pom.xml -P prd compile
 ```
